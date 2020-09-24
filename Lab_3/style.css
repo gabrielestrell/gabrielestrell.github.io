@@ -62,7 +62,7 @@ body > * {
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: blue;
+  background-color: black;
   padding: 1%;
 }
 
