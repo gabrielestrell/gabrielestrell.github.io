@@ -57,12 +57,12 @@ header {
 }
 
 body > * {
-  background-color: blue;
+  background-color: red;
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: black;
+  background-color: blue;
   padding: 1%;
 }
 
