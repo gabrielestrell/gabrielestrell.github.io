@@ -1,6 +1,7 @@
 .header1 {
     background-color: rgb(59, 68, 255);
     color: white;
+    display: flex;
 }
 
 .content{
