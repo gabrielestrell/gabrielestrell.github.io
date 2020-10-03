@@ -6,9 +6,5 @@
 .content{
     width: 960px;
     display: flex;
-}
-
-.wrapper{
     margin: auto;
-    
 }
