@@ -2,7 +2,7 @@
     background-color: rgb(59, 68, 255);
     color: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .content{
