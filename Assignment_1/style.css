@@ -7,3 +7,7 @@
 .content{
     width: 960px;
 }
+
+.wrapper{
+    margin: auto;
+}
