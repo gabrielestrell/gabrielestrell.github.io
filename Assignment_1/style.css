@@ -6,9 +6,9 @@
 .content{
     width: 960px;
     display: flex;
-    
+    margin: auto;
 }
 
 .wrapper{
-    margin: auto;
+    display: flex;
 }
