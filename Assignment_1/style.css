@@ -8,7 +8,7 @@
 .content{
     width: 960px;
     display: flex;
-    
+    margin: 0;
     background-color: rgb(245, 153, 2);    
 }
 
