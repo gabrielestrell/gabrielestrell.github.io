@@ -9,9 +9,10 @@
     width: 960px;
     display: flex;
     margin: auto;
-    background-color: rgb(245, 153, 2);
+    
 }
 
 .wrapper{
     display: flex;
+    background-color: rgb(245, 153, 2);
 }
