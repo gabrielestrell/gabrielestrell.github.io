@@ -3,7 +3,7 @@
     color: white;
     display: flex;
     justify-content: space-between;
-    font-family: 'Bangers';
+    font-family: 'Bangers', cursive;
 }
 
 .content{
