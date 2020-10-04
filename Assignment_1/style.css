@@ -9,11 +9,10 @@
     width: 960px;
     display: flex;
     justify-content: center;
-    background-color: rgb(245, 153, 2);
     
 }
 
 .wrapper{
     display: flex;
-    
+    background-color: rgb(245, 153, 2);
 }
