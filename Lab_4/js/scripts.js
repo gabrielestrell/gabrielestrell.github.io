@@ -51,7 +51,10 @@ let lastName = myFullName.substring(8,15);
 
 // 9 Add the total length of your first and last names together
 
-
+let totalNameLength = firstName.length + lastName.length;
 
 // 10 Display that total next to your name in your header
 
+let nameLengthVal = document.querySelector('.header');
+
+nameLengthVal.textContent = "The length of my name is " + totalNameLength;
