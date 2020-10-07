@@ -8,8 +8,8 @@ document.querySelector(".header").innerHTML = myFullName + "'s Lab 4\n";
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 
-var paragraph1 = document.createElement("Paragraph 1");
-var paragraph2 = document.createElement("Paragraph 2");
+var paragraph1 = document.createElement("Paragraph One");
+var paragraph2 = document.createElement("Paragraph Two");
 var p1_text = document.createTextNode("The first new paragraph. \n");
 var p2_text = document.createTextNode("The second new paragraph. \n");
 
