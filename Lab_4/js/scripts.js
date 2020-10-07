@@ -11,9 +11,12 @@ myHeading.textContent = myFullName +  "'s Lab 4";
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 
-let paragraph1 = document.querySelector('.content');
+//let paragraph1 = document.querySelector('.content');
+//let paragraph2 = document.querySelector('.content');
 
-let paragraph2 = document.querySelector('.content');
+var paragraph1 = document.createElement("Paragraph1");   // Create a <button> element
+paragraph1.innerHTML = "CLICK ME";                   // Insert text
+document.content.appendChild(paragraph1);
 
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
