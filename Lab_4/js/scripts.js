@@ -20,8 +20,8 @@ let myFullName = "Bill Farmer"; // 10 characters in name...not including space
 
 // 10 Display that total next to your name in your header
 
-myFullName = Gabriel Estrella;
+myFullName = "Gabriel Estrella";
 
 let myHeading = document.querySelector('header');
 
-myHeading.textContent = myFullName +  's Lab 4';
+myHeading.textContent = myFullName +  "'s Lab 4";
