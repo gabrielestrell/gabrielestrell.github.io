@@ -26,15 +26,18 @@ contentSection.appendChild(paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
 
-
+var nameLength = "My name has " + myFullName.length + " characters.";
+paragraph1.append(nameLength);
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 
+var thirdCharacter = myFullName.charAt(2);
 
+paragraph2.append(thirdCharacter);
 
 // 6 Add a new line to your second paragraph
 
-
+paragraph2.append("\n");
 
 // 7 Return the final three characters of your last name to that new line
 
