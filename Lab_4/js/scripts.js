@@ -41,7 +41,8 @@ paragraph2.append("\n");
 
 // 7 Return the final three characters of your last name to that new line
 
-
+var finalThreeCharacters = myFullName.substring(myFullName.length - 3, myFullName.length);
+paragraph2.append(finalThreeCharacters);
 
 // 8 Substring your first and last name into two separate variables
 
