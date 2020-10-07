@@ -10,8 +10,8 @@ document.querySelector(".header").innerHTML = myFullName + "'s Lab 4\n";
 
 var paragraph1 = document.createElement("P1");
 var paragraph2 = document.createElement("P2");
-var p1_text = document.createTextNode("The first new paragraph. \n");
-var p2_text = document.createTextNode("The second new paragraph. \n");
+var p1_text = document.createTextNode("The first paragraph. \n");
+var p2_text = document.createTextNode("The second paragraph. \n");
 
 paragraph1.appendChild(p1_text);
 paragraph2.appendChild(p2_text);
