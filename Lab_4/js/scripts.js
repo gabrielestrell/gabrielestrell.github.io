@@ -22,6 +22,7 @@ let myFullName = "Bill Farmer"; // 10 characters in name...not including space
 
 myFullName = "Gabriel Estrella";
 
-let myHeading = document.querySelector('div');
+let myHeading = document.querySelector('.header');
 
 myHeading.textContent = myFullName +  "'s Lab 4";
+
