@@ -30,7 +30,7 @@ paragraph1.append(nameLength);
 
 let thirdCharacter = myFullName.charAt(2);
 
-paragraph2.append(thirdCharacter);
+paragraph2.append("The third character of my first name is: " + thirdCharacter);
 
 // 6 Add a new line to your second paragraph
 
@@ -39,7 +39,7 @@ paragraph2.append("\n");
 // 7 Return the final three characters of your last name to that new line
 
 let finalThreeCharacters = myFullName.substring(myFullName.length - 3, myFullName.length);
-paragraph2.append(finalThreeCharacters);
+paragraph2.append("The final three characters of my last name is: " + finalThreeCharacters);
 
 // 8 Substring your first and last name into two separate variables
 
