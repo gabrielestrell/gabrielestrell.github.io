@@ -44,7 +44,7 @@ paragraph2.append(finalThreeCharacters);
 // 8 Substring your first and last name into two separate variables
 
 let firstName = myFullName.substring(0,6);
-let lastName = myFullName.substring(8,15);
+let lastName = myFullName.substring(8,14);
 
 // 9 Add the total length of your first and last names together
 
