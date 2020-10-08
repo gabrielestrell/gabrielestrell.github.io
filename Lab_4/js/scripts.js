@@ -33,7 +33,7 @@ paragraph1.append(nameLength);
 
 let thirdCharacter = myFullName.charAt(2).toUpperCase();
 
-paragraph2.append("The third character of my first name is: " + thirdCharacter + "\n");
+paragraph2.append("The third character of my first name is: " + thirdCharacter);
 
 // 6 Add a new line to your second paragraph
 
