@@ -1,7 +1,7 @@
 let myFullName = "Bill Farmer"; // 10 characters in name...not including space
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
 
-myFullName = "Gabriel Estrella";
+myFullName = "Gabriel Estrellr";
 
 document.querySelector(".header").innerHTML = myFullName + "'s Lab 4\n";
 
