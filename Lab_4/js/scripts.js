@@ -37,7 +37,8 @@ paragraph2.append("The third character of my first name is: " + thirdCharacter);
 
 // 6 Add a new line to your second paragraph
 
-paragraph2.append("\n");
+paragraph2.append("");
+paragraph2.append("");
 
 // 7 Return the final three characters of your last name to that new line
 
