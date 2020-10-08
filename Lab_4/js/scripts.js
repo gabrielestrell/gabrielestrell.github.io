@@ -10,8 +10,8 @@ document.querySelector(".header").innerHTML = myFullName + "'s Lab 4\n";
 
 let paragraph1 = document.createElement("P");
 let paragraph2 = document.createElement("P");
-let p1_text = document.createTextNode("\n");
-let p2_text = document.createTextNode("\n");
+let p1_text = document.createTextNode("");
+let p2_text = document.createTextNode("");
 
 paragraph1.className = "content1";
 paragraph2.className = "content2";
