@@ -31,9 +31,9 @@ paragraph1.append(nameLength);
 
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 
-let thirdCharacter = myFullName.charAt(2);
+let thirdCharacter = myFullName.charAt(2).toUpperCase();
 
-paragraph2.append("The third character of my first name is: " + thirdCharacter.toUpperCase);
+paragraph2.append("The third character of my first name is: " + thirdCharacter);
 
 // 6 Add a new line to your second paragraph
 
