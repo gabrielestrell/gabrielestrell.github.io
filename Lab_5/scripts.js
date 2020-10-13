@@ -83,5 +83,10 @@ countryListElement.className = "countries";
 const btn = document.querySelector('button');
 
 btn.onclick=function randomContries() {
+    document.querySelector(".content").appendChild(countryListContainer);
+    countryListContainer.appendChild(countryListElement);
+    for (x = 0; x < 25; x++){
+        
+    }
 
 }
