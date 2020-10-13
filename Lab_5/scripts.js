@@ -86,7 +86,7 @@ btn.onclick=function randomContries() {
     document.querySelector(".content").appendChild(countryListContainer);
     countryListContainer.appendChild(countryListElement);
     for (x = 0; x < 25; x++){
-        
+        randomNumbers=Math.floor(Math.random()*countryCodeList.length);
     }
 
 }
