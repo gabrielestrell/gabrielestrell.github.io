@@ -74,10 +74,14 @@ let countryList = [];
 let countryListContainer=document.createElement("");
 let countryListElement=document.createElement("");
 
+let countryListCount=countryList.length;
+let listItem;
+let randomNumbers;
+
 countryListElement.className = "countries";
 
 const btn = document.querySelector('button');
 
 btn.onclick=function randomContries() {
-    
+
 }
