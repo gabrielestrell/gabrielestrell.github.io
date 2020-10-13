@@ -75,3 +75,9 @@ let countryListContainer=document.createElement("");
 let countryListElement=document.createElement("");
 
 countryListElement.className = "countries";
+
+const btn = document.querySelector('button');
+
+btn.onclick=function randomContries() {
+    
+}
