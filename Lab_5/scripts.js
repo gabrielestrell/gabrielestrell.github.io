@@ -71,6 +71,9 @@ var countryName=["Afghanistan", "Aland Islands", "Albania",	"Algeria",	"American
 
 let countryList = [];
 
+let a1;
+let a2;
+
 let countryListContainer=document.createElement("");
 let countryListElement=document.createElement("");
 
@@ -85,9 +88,11 @@ const btn = document.querySelector('button');
 btn.onclick=function randomContries() {
     document.querySelector(".content").appendChild(countryListContainer);
     countryListContainer.appendChild(countryListElement);
-    for (x = 0; x < 25; x++)
+    for (let i = 0; i < 25; i++)
     {
         randomNumbers=Math.floor(Math.random()*countryInitials.length);
+
+        a1=document.createElement("p");
     }
 
 }
