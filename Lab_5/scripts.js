@@ -1,4 +1,4 @@
-var countryInitials=["AF",	"AX",	"AL",	"DZ",	"AS",	
+var countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",	
 "AD",	"AO",	"AI",	"AQ",	"AG",	"AR",	"AM",	"AW",	
 "AU",	"AT",	"AZ",	"BS",	"BH",	"BD",	"BB",	"BY",	
 "BE",	"BZ",	"BJ",	"BM",	"BT",	"BO",	"BQ",	"BA",	
@@ -31,7 +31,7 @@ var countryInitials=["AF",	"AX",	"AL",	"DZ",	"AS",
 "UY",	"UZ",	"VU",	"VE",	"VN",	"VG",	"VI",	"WF",
 "EH",	"YE",	"ZM",	"ZW"];
 
-var countryName=["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
+var countryName = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
 "Andorra",	"Angola",	"Anguilla",	"Antarctica",	"Antigua and Barbuda",	"Argentina",	"Armenia",	
 "Aruba",	"Australia",	"Austria",	"Azerbaijan",	"Bahamas",	"Bahrain",	"Bangladesh",	"Barbados",	
 "Belarus",	"Belgium",	"Belize",	"Benin",	"Bermuda",	"Bhutan",	"Bolivia (Plurinational State of)",	
@@ -76,8 +76,8 @@ let a2;
 let b1;
 let b2;
 
-let countryListContainer=document.createElement("div");
-let countryListElement=document.createElement("ol");
+let countryListContainer = document.createElement("div");
+let countryListElement = document.createElement("ol");
 
 let countryListCount=countryList.length;
 let listItem;
@@ -87,24 +87,25 @@ countryListElement.className = "countries";
 
 const btn = document.querySelector('button');
 
-btn.onclick=function randomContries() {
+btn.onclick = function randomContries() {
     document.querySelector(".content").appendChild(countryListContainer);
     countryListContainer.appendChild(countryListElement);
+
     for (i = 0; i < 25; i++)
     {
-        randomNumbers=Math.floor(Math.random() * countryInitials.length);
+        randomNumbers = Math.floor(Math.random() * countryCode.length);
 
-        a1=document.createElement("p1");
-        a2=document.createTextNode(countryName[randomNumbers] + " ");
+        a1 = document.createElement("p1");
+        a2 = document.createTextNode(countryName[randomNumbers] + ", ");
         a1.appendChild(a2);
         a1.className="countryName";
         
-        b1=document.createElement("p2");
-        b2=document.createTextNode(countryInitials[randomNumbers]);
+        b1 = document.createElement("p2");
+        b2 = document.createTextNode(countryCode[randomNumbers]);
         b1.appendChild(b2);
-        b1.className="countryCode";
+        b1.className = "countryCode";
 
-        listItem=document.createElement("li");
+        listItem = document.createElement("li");
         listItem.appendChild(a1);
         listItem.appendChild(b1);
 
@@ -114,8 +115,8 @@ btn.onclick=function randomContries() {
 }
 
 for (i = 0; i < countryListElement.length; i++){
-    if (countryInitials[i] != countryListElement[i])
+    if (countryCode[i] != countryCode[i])
     {
-        console.log(countryInitials[i]);
+        console.log(countryCode[i]);
     }
 }
