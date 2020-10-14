@@ -94,12 +94,21 @@ btn.onclick=function randomContries() {
     {
         randomNumbers=Math.floor(Math.random() * countryInitials.length);
 
-        a1=document.createElement("p");
+        a1=document.createElement("P1");
         a2=document.createTextNode(countryName[randomNumbers] + " ");
         a1.appendChild(a2);
         a1.className="countryName";
-
         
+        b1=document.createElement("P2");
+        b2=document.createTextNode(countryInitials[randomNumbers]);
+        b1.appendChild(b2);
+        b1.className="countryCode";
+
+        listItem=document.createElement("p");
+        listItem.appendChild(a1);
+        listItem.appendChild(b1);
+
+        countryListElement.appendChild(listItem);
     }
 
 }
