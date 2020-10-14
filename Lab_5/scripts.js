@@ -95,6 +95,11 @@ btn.onclick=function randomContries() {
         randomNumbers=Math.floor(Math.random()*countryInitials.length);
 
         a1=document.createElement("p");
+        a2=document.createTextNode(countryName[randomNumbers] + " ");
+        a1.appendChild(a2);
+        a1.className="countryName";
+
+        
     }
 
 }
