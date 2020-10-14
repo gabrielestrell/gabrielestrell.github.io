@@ -92,7 +92,7 @@ btn.onclick=function randomContries() {
     countryListContainer.appendChild(countryListElement);
     for (let i = 0; i < 25; i++)
     {
-        randomNumbers=Math.floor(Math.random()*countryInitials.length);
+        randomNumbers=Math.floor(Math.random() * countryInitials.length);
 
         a1=document.createElement("p");
         a2=document.createTextNode(countryName[randomNumbers] + " ");
