@@ -73,6 +73,8 @@ let countryList = [];
 
 let a1;
 let a2;
+let b1;
+let b2;
 
 let countryListContainer=document.createElement("");
 let countryListElement=document.createElement("");
