@@ -1,4 +1,4 @@
-var countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",	
+let countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",	
 "AD",	"AO",	"AI",	"AQ",	"AG",	"AR",	"AM",	"AW",	
 "AU",	"AT",	"AZ",	"BS",	"BH",	"BD",	"BB",	"BY",	
 "BE",	"BZ",	"BJ",	"BM",	"BT",	"BO",	"BQ",	"BA",	
@@ -31,7 +31,7 @@ var countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",
 "UY",	"UZ",	"VU",	"VE",	"VN",	"VG",	"VI",	"WF",
 "EH",	"YE",	"ZM",	"ZW"];
 
-var countryName = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
+let countryName = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
 "Andorra",	"Angola",	"Anguilla",	"Antarctica",	"Antigua and Barbuda",	"Argentina",	"Armenia",	
 "Aruba",	"Australia",	"Austria",	"Azerbaijan",	"Bahamas",	"Bahrain",	"Bangladesh",	"Barbados",	
 "Belarus",	"Belgium",	"Belize",	"Benin",	"Bermuda",	"Bhutan",	"Bolivia (Plurinational State of)",	
@@ -94,7 +94,7 @@ btn.onclick = function randomCountries()
 
     for (i = 0; i < 25; i++)
     {
-        randomNumbers = Math.floor();
+        randomNumbers = Math.floor(Math.random() * countryCode.length);
 
         a1 = document.createElement("p1");
         a2 = document.createTextNode(countryName[randomNumbers] + ", ");
