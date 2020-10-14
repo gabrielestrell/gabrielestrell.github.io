@@ -104,7 +104,7 @@ btn.onclick=function randomContries() {
         b1.appendChild(b2);
         b1.className="countryCode";
 
-        listItem=document.createElement("p");
+        listItem=document.createElement("li");
         listItem.appendChild(a1);
         listItem.appendChild(b1);
 
