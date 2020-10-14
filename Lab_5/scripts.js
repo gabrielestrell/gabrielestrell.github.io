@@ -1,4 +1,4 @@
-let countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",	
+let countryCodeArray = ["AF",	"AX",	"AL",	"DZ",	"AS",	
 "AD",	"AO",	"AI",	"AQ",	"AG",	"AR",	"AM",	"AW",	
 "AU",	"AT",	"AZ",	"BS",	"BH",	"BD",	"BB",	"BY",	
 "BE",	"BZ",	"BJ",	"BM",	"BT",	"BO",	"BQ",	"BA",	
@@ -31,7 +31,7 @@ let countryCode = ["AF",	"AX",	"AL",	"DZ",	"AS",
 "UY",	"UZ",	"VU",	"VE",	"VN",	"VG",	"VI",	"WF",
 "EH",	"YE",	"ZM",	"ZW"];
 
-let countryName = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
+let countryNameArray = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
 "Andorra",	"Angola",	"Anguilla",	"Antarctica",	"Antigua and Barbuda",	"Argentina",	"Armenia",	
 "Aruba",	"Australia",	"Austria",	"Azerbaijan",	"Bahamas",	"Bahrain",	"Bangladesh",	"Barbados",	
 "Belarus",	"Belgium",	"Belize",	"Benin",	"Bermuda",	"Bhutan",	"Bolivia (Plurinational State of)",	
@@ -81,7 +81,7 @@ let b2;
 
 let countryListCount = countryList.length;
 let listItem;
-let randomNumbers;
+let randomNum;
 
 countryListElement.className = "countries";
 
@@ -94,17 +94,17 @@ btn.onclick = function randomCountries()
 
     for (i = 0; i < 25; i++)
     {
-        randomNumbers = Math.floor(Math.random() * countryCode.length);
+        randomNum = Math.floor(Math.random() * countryCodeArray.length);
 
         a1 = document.createElement("p1");
-        a2 = document.createTextNode(countryName[randomNumbers] + ", ");
+        a2 = document.createTextNode(countryNameArray[randomNum] + ", ");
         a1.appendChild(a2);
-        a1.className="countryName";
+        a1.className="country_Name";
         
         b1 = document.createElement("p2");
-        b2 = document.createTextNode(countryCode[randomNumbers]);
+        b2 = document.createTextNode(countryCodeArray[randomNum]);
         b1.appendChild(b2);
-        b1.className = "countryCode";
+        b1.className = "country_Code";
 
         listItem = document.createElement("li");
         listItem.appendChild(a1);
@@ -116,8 +116,8 @@ btn.onclick = function randomCountries()
 }
 
 for (i = 0; i < countryListElement.length; i++){
-    if (countryCode[i] != countryCode[i])
+    if (countryCodeArray[i] != countryListElement[i])
     {
-        console.log(countryCode[i]);
+        console.log(countryCodeArray[i]);
     }
 }
