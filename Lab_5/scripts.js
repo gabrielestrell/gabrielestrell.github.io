@@ -94,7 +94,7 @@ btn.onclick = function randomCountries()
 
     for (i = 0; i < 25; i++)
     {
-        randomNum = Math.floor(Math.random() * countryCodeArray.length);
+        randomNum = Math.floor(Math.random * countryCodeArray.length);
 
         a1 = document.createElement("p1");
         a2 = document.createTextNode(countryNameArray[randomNum] + ", ");
