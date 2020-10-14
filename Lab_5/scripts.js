@@ -76,8 +76,8 @@ let a2;
 let b1;
 let b2;
 
-let countryListContainer=document.createElement("");
-let countryListElement=document.createElement("");
+let countryListContainer=document.createElement("d");
+let countryListElement=document.createElement("e");
 
 let countryListCount=countryList.length;
 let listItem;
