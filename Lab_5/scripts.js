@@ -31,7 +31,7 @@ var countryInitials=["AF",	"AX",	"AL",	"DZ",	"AS",
 "UY",	"UZ",	"VU",	"VE",	"VN",	"VG",	"VI",	"WF",
 "EH",	"YE",	"ZM",	"ZW"];
 
-var countryName=["Afghanistan", "Aland Islands", "Albania",	"Algeria",	"American Samoa",	
+var countryName=["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"American Samoa",	
 "Andorra",	"Angola",	"Anguilla",	"Antarctica",	"Antigua and Barbuda",	"Argentina",	"Armenia",	
 "Aruba",	"Australia",	"Austria",	"Azerbaijan",	"Bahamas",	"Bahrain",	"Bangladesh",	"Barbados",	
 "Belarus",	"Belgium",	"Belize",	"Benin",	"Bermuda",	"Bhutan",	"Bolivia (Plurinational State of)",	
@@ -76,8 +76,8 @@ let a2;
 let b1;
 let b2;
 
-let countryListContainer=document.createElement("d");
-let countryListElement=document.createElement("e");
+let countryListContainer=document.createElement("div");
+let countryListElement=document.createElement("ol");
 
 let countryListCount=countryList.length;
 let listItem;
