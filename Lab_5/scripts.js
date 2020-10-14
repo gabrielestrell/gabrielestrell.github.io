@@ -70,14 +70,14 @@ var countryName = ["Afghanistan",	"Ã…land Islands",	"Albania",	"Algeria",	"Am
 "Wallis and Futuna",	"Western Sahara",	"Yemen",	"Zambia",	"Zimbabwe"];
 
 let countryList = [];
+let countryListContainer = document.createElement("div");
+let countryListElement = document.createElement("ol");
+
 let i;
 let a1;
 let a2;
 let b1;
 let b2;
-
-let countryListContainer = document.createElement("div");
-let countryListElement = document.createElement("ol");
 
 let countryListCount = countryList.length;
 let listItem;
@@ -87,7 +87,8 @@ countryListElement.className = "countries";
 
 const btn = document.querySelector("button");
 
-btn.onclick = function randomCountries() {
+btn.onclick = function randomCountries()
+{
     document.querySelector(".content").appendChild(countryListContainer);
     countryListContainer.appendChild(countryListElement);
 
