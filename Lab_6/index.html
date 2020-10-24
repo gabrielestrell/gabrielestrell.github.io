@@ -9,17 +9,16 @@
 <body>
     <form action="https://fierce-taiga-97625.herokuapp.com/lab" method="POST">
         <header>HTML Forms Lab</header>
-        <ul>
-            <li>
-                <label for = "name">Name</label>
-                <input type = "text" id = "name" name = "users_name">
-            </li>
-            <li>
-                <label for = "interests">Interests</label>
-                <textarea id = "interests" name = "users_interests" rows="5" cols="33"></textarea>
-            </li>
-        </ul>
+        <div>
+            <label for = "name">Name</label>
+            <input type = "text" id = "name" name = "users_name">
+        </div>
 
+        <div>
+            <label for = "interests">Interests</label>
+            <textarea id = "interests" name = "users_interests" rows="5" cols="33"></textarea>
+        </div>
+        
         <li class = "button">
             <button type = "submit">Submit</button>
         </li>
