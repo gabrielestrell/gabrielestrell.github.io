@@ -22,11 +22,7 @@ function getBusRoute() {
         let lonMax = route.lon_max;
         let lonMin = route.lon_min;
 
-        document.getElementById("main").innerHTML = title + 
-        "<br>Lat max: " + latMax +
-        "<br>Lat min: " + latMin +
-        "<br>Lon max: " + lonMax +
-        "<br>Lon min: " + lonMin;
+        document.getElementById("main").innerHTML = "Stored bus route in session" + JSON.stringify(route);
       })
       .catch((err) => {
         console.log(err);
