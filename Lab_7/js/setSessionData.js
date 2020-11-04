@@ -12,7 +12,7 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        sessionStorage.setItem('bus_route_info', JSON.stringify(route));
+        sessionStorage.setItem('bus_route_info', JSON.stringify(busRoute));
         console.log("Stored bus route in session")
 
         let title = route.title;
