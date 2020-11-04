@@ -23,6 +23,10 @@ function getBusRoute() {
           latMin = route.lat_min;
           lonMax = route.lon_max;
           lonMin = route.lon_min;
+          message = title + " <br>Lat max: " + latMax + " <br>Lat min: " + latMin + " <br>Lon Max: " + lonMax + " <br>Lon Min: " + lonMin;
+        }
+        else {
+          message = "No bus info available";
         }
       })
       .catch((err) => {
