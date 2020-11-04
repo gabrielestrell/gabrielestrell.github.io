@@ -12,15 +12,15 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        sessionStorage.setItem('bus_route_info', JSON.stringify(busRoute));
+        sessionStorage.setItem('bus_route_info', JSON.stringify(route));
         console.log("Stored bus route in session")
-        console.log(busRoute);
+        console.log(route);
 
-        let title = busRoute.title;
-        let latMax = busRoute.lat_max;
-        let latMin = busRoute.lat_min;
-        let lonMax = busRoute.lon_max;
-        let lonMin = busRoute.lon_min;
+        let title = route.title;
+        let latMax = route.lat_max;
+        let latMin = route.lat_min;
+        let lonMax = route.lon_max;
+        let lonMin = route.lon_min;
 
         document.getElementById("main").innerHTML = title + 
         "<br>Lat max: " + latMax +
