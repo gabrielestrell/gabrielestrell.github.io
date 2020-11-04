@@ -1,7 +1,7 @@
 const main = document.getElementById("main");
 
 function getBusRoute() {
-  let busRoute = ""; // Your code here
+  let busRoute = document.getElementById("busroute"); // Your code here
 
   if ((typeof busRoute !== "undefined") & (busRoute !== "")) {
     let busRouteURL = ""; // Your code here
