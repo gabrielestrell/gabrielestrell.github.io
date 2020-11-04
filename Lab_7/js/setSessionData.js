@@ -4,7 +4,7 @@ function getBusRoute() {
   let busRoute = document.getElementById("busroute").value; // Your code here
 
   if ((typeof busRoute !== "undefined") & (busRoute !== "")) {
-    let busRouteURL = "https://api.umd.io/v0/bus/routes" + busRoute; // Your code here
+    let busRouteURL = "https://api.umd.io/v0/bus/routes/" + busRoute; // Your code here
 
     fetch(busRouteURL)
       .then((response) => {
