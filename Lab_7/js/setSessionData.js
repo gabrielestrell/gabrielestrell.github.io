@@ -16,6 +16,14 @@ function getBusRoute() {
         console.log(route);
         let title, latMax, latMin, lonMax, lonMin;
         let message = "";
+
+        if (typeof route.title !== "undefined") {
+          title = route.title;
+          latMax = route.lat_max;
+          latMin = route.lat_min;
+          lonMax = route.lon_max;
+          lonMin = route.lon_min;
+        }
       })
       .catch((err) => {
         console.log(err);
