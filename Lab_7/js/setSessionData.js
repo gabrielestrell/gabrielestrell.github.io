@@ -12,26 +12,20 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        sessionStorage.setItem('bus_route_info', JSON.stringify(main));
+        sessionStorage.setItem('bus_route_info', JSON.stringify(route));
+        console.log("Stored bus route in session")
 
-        console.log("Here");
-        console.log(route);
-        let title, latMax, latMin, lonMax, lonMin;
-        let message = "";
+        let title = route.title;
+        let latMax = route.lat_max;
+        let latMin = route.lat_min;
+        let lonMax = route.lon_max;
+        let lonMin = route.lon_min;
 
-        if (typeof route.title !== "undefined") {
-          title = route.title;
-          latMax = route.lat_max;
-          latMin = route.lat_min;
-          lonMax = route.lon_max;
-          lonMin = route.lon_min;
-          message = title + " <br>Lat max: " + latMax + " <br>Lat min: " + latMin + " <br>Lon Max: " + lonMax + " <br>Lon Min: " + lonMin;
-        }
-        else {
-          message = "No bus info available";
-        }
-        console.log(title);
-        main.innerHTML = "Bus Route Info: " + message;
+        document.getElementById("main").innerHTML = title + 
+        "<br>Lat max: " +
+        "<br>Lat min: " +
+        "<br>Lon max: " +
+        "<br>Lon min: ";
       })
       .catch((err) => {
         console.log(err);
