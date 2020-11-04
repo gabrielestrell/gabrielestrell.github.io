@@ -12,6 +12,10 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
+        console.log("Here");
+        console.log(route);
+        let title, latMax, latMin, lonMax, lonMin;
+        let message = "";
       })
       .catch((err) => {
         console.log(err);
