@@ -12,17 +12,19 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        sessionStorage.setItem('bus_route_info', JSON.stringify(route));
+        sessionStorage.setItem('bus_route_info', JSON.stringify(busRoute));
         console.log("Stored bus route in session")
-        console.log(route);
+        console.log(busRoute);
 
+        /*
         let title = route.title;
         let latMax = route.lat_max;
         let latMin = route.lat_min;
         let lonMax = route.lon_max;
         let lonMin = route.lon_min;
+        */
 
-        document.getElementById("main").innerHTML = "Stored bus route in session" + JSON.stringify(route);
+        document.getElementById("main").innerHTML = "Stored bus route in session" + JSON.stringify(busRoute);
       })
       .catch((err) => {
         console.log(err);
