@@ -24,7 +24,7 @@ function getBusRoute() {
         let lonMin = route.lon_min;
         */
 
-        document.getElementById("main").innerHTML = "Stored bus route in session" + JSON.stringify(busRoute);
+        main.innerHTML = "Stored bus route in session" + JSON.stringify(busRoute);
       })
       .catch((err) => {
         console.log(err);
