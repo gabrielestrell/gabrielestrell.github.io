@@ -14,6 +14,7 @@ function getBusRoute() {
         // YOUR CODE HERE
         sessionStorage.setItem('bus_route_info', JSON.stringify(route));
         console.log("Stored bus route in session")
+        console.log(route);
 
         let title = route.title;
         let latMax = route.lat_max;
