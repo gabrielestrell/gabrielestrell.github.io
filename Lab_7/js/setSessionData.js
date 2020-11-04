@@ -12,6 +12,8 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
+        sessionStorage.setItem('bus_route_info', JSON.stringify(main));
+
         console.log("Here");
         console.log(route);
         let title, latMax, latMin, lonMax, lonMin;
@@ -28,6 +30,8 @@ function getBusRoute() {
         else {
           message = "No bus info available";
         }
+        console.log(title);
+        main.innerHTML = "Bus Route Info: " + message;
       })
       .catch((err) => {
         console.log(err);
