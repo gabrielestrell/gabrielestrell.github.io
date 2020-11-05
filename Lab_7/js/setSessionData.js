@@ -46,7 +46,6 @@ function getBusRoute() {
         "<br>Lot max: " + route.lon_max +
         "<br>Lot min: " + route.lon_min;
 
-
       })
       .catch((err) => {
         console.log(err);
