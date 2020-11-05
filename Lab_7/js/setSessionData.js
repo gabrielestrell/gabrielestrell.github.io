@@ -12,9 +12,9 @@ function getBusRoute() {
       })
       .then((route) => {
         // YOUR CODE HERE
-        sessionStorage.setItem('bus_route_info', JSON.stringify(busRoute));
+        sessionStorage.setItem('bus_route_info', JSON.stringify(route));
         console.log("Stored bus route in session")
-        console.log(busRoute);
+        console.log(route);
 
         /*
         let title = route.title;
@@ -24,7 +24,7 @@ function getBusRoute() {
         let lonMin = route.lon_min;
         */
 
-        main.innerHTML = "Stored bus route in session" + JSON.stringify(busRoute);
+        main.innerHTML = "Stored bus route in session" + JSON.stringify(route);
       })
       .catch((err) => {
         console.log(err);
