@@ -23,28 +23,28 @@ function getBusRoute() {
         let lon_max;
         let lon_min;
 
-        sessionStorage.setItem('title', route.title);
+        title = sessionStorage.setItem('title', route.title);
         console.log(route);
 
-        sessionStorage.setItem('lat_max', route.lat_max);
+        lat_max = sessionStorage.setItem('lat_max', route.lat_max);
         console.log(route);
 
-        sessionStorage.setItem('lat_min', route.lat_min);
+        lat_min = sessionStorage.setItem('lat_min', route.lat_min);
         console.log(route);
 
-        sessionStorage.setItem('lon_max', route.lon_max);
+        lon_max = sessionStorage.setItem('lon_max', route.lon_max);
         console.log(route);
 
-        sessionStorage.setItem('lon_min', route.lon_min);
+        lon_min = sessionStorage.setItem('lon_min', route.lon_min);
         console.log(route);
 
         //main.innerHTML = "Stored bus route in session" + JSON.stringify(route);
 
-        main.innerHTML = route.title + 
-        "<br>Lat max: " + route.lat_max +
-        "<br>Lat min: " + route.lat_min +
-        "<br>Lot max: " + route.lon_max +
-        "<br>Lot min: " + route.lon_min;
+        main.innerHTML = title + 
+        "<br>Lat max: " + lat_max +
+        "<br>Lat min: " + lat_min +
+        "<br>Lot max: " + lon_max +
+        "<br>Lot min: " + lon_min;
 
 
       })
