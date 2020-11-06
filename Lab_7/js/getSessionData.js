@@ -7,4 +7,4 @@ let lon_min = sessionStorage.getItem("lon_min", route.lon_min);
 
 // Your code here
 // Set the corresponding <p> elements in the GetSessionData.html page with the values from above
-document.getElementById("title").innerHTML = title;
+document.getElementById("title").innerHTML = route.title;
