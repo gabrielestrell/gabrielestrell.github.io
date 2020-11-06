@@ -40,7 +40,7 @@ function getBusRoute() {
 
         //main.innerHTML = "Stored bus route in session" + JSON.stringify(route);
 
-        main.innerHTML = route.title + 
+        main.innerHTML = "Title: " + route.title + 
         "<br>Lat max: " + route.lat_max +
         "<br>Lat min: " + route.lat_min +
         "<br>Lot max: " + route.lon_max +
