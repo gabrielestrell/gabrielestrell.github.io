@@ -57,10 +57,11 @@ function getBusRoute() {
       });
   } else {
     main.innerHTML = "No value provided";
+    
     sessionStorage.setItem('title', 'Nothing set');
     sessionStorage.setItem('lat_max', 'Nothing set');
     sessionStorage.setItem('lat_min', 'Nothing set');
     sessionStorage.setItem('lon_max', 'Nothing set');
-    sessionStorage.setItem('lon_min', 'Nothing set');  
+    sessionStorage.setItem('lon_min', 'Nothing set');
   }
 }

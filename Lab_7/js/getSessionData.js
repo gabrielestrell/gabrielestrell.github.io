@@ -13,3 +13,7 @@ let lon_min = sessionStorage.getItem("lon_min");
 
 
 document.getElementById("title").innerHTML = title;
+document.getElementById("lat_max").innerHTML = lat_max;
+document.getElementById("lat_min").innerHTML = lat_min;
+document.getElementById("lon_max").innerHTML = lon_max;
+document.getElementById("lon_min").innerHTML = lon_min;
