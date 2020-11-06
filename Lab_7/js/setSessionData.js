@@ -25,19 +25,19 @@ function getBusRoute() {
         let lon_min;
 
         title = sessionStorage.setItem('title', route.title);
-        console.log(route);
+        //console.log(route);
 
         lat_max = sessionStorage.setItem('lat_max', route.lat_max);
-        console.log(route);
+        //console.log(route);
 
         lat_min = sessionStorage.setItem('lat_min', route.lat_min);
-        console.log(route);
+        //console.log(route);
 
         lon_max = sessionStorage.setItem('lon_max', route.lon_max);
-        console.log(route);
+        //console.log(route);
 
         lon_min = sessionStorage.setItem('lon_min', route.lon_min);
-        console.log(route);
+        console.table(route);
 
         //main.innerHTML = "Stored bus route in session" + JSON.stringify(route);
 
