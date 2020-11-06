@@ -1,6 +1,6 @@
 // Get saved data from sessionStorage
 let title = sessionStorage.getItem('title'); // Your code here
-console.log(route);
+console.log("Here");
 const val_1 = JSON.parse(title);
 
 let lat_max = sessionStorage.getItem("lat_max");
