@@ -37,15 +37,18 @@ function getBusRoute() {
         //console.log(route);
 
         lon_min = sessionStorage.setItem('lon_min', route.lon_min);
-        console.table(route);
+        console.log(route);
 
         //main.innerHTML = "Stored bus route in session" + JSON.stringify(route);
 
-        main.innerHTML = "Title: " + route.title + 
+        main.innerHTML = "Session storage saved.";
+        /*
+        "Title: " + route.title + 
         "<br>Lat max: " + route.lat_max +
         "<br>Lat min: " + route.lat_min +
         "<br>Lot max: " + route.lon_max +
         "<br>Lot min: " + route.lon_min;
+        */
 
       })
       .catch((err) => {
@@ -54,5 +57,10 @@ function getBusRoute() {
       });
   } else {
     main.innerHTML = "No value provided";
+    sessionStorage.setItem('title', 'Nothing set');
+    sessionStorage.setItem('lat_max', 'Nothing set');
+    sessionStorage.setItem('lat_min', 'Nothing set');
+    sessionStorage.setItem('lon_max', 'Nothing set');
+    sessionStorage.setItem('lon_min', 'Nothing set');  
   }
 }
