@@ -45,6 +45,8 @@ async function getData() {
                 
                 let addToChart = {'label':author,y:ups}; // Gave this. This needs to be added to the 'chartValues'
                 /*.......*/
+
+                chartValues.push(addToChart);
             }
         })
         .then(values => console.log(chartValues));
