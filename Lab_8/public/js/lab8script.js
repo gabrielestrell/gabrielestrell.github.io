@@ -12,6 +12,8 @@ async function getData() {
         .then(res => res.json())
         .then((json) => {
             let listSize = json.data.children.length;
+
+            console.log(listSize)
             // Loop to pick 5 random entries
             for (x = 0; x < 5; x++) {
                 /*
@@ -22,6 +24,21 @@ async function getData() {
                     Add a new <li> element with the message to the 'redditList' element
                     Add a data entry to chartValues with author as the label and ups as the y component
                 */
+
+               let random = getRandomInt(0, listSize);
+               let post = json.data.children[random].data;
+               console.log(post)
+               let subreddit = post.subreddit;
+               let author = post.author;
+               let title = post.title;
+               let ups = post.ups;
+
+               let message = "<b>Subreddit </b>: " + subreddit + 
+               " <b>Author</b>:" + author + " <b>Title</b>:" + 
+               title + " <b>Up votes</b>: " + ups;
+
+               let select = document.getElementById("redditList");
+               select.innerHTML += "<li>" + message + "</li>";
     
 
                 /*.......*/
