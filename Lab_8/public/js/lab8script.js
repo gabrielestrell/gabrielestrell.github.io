@@ -31,20 +31,21 @@ async function getData() {
                     Add a data entry to chartValues with author as the label and ups as the y component
                 */
 
-               let random = getRandomInt(0, listSize);
-               let post = json.data.children[random].data;
-               console.log(post)
-               let subreddit = post.subreddit;
-               let author = post.author;
-               let title = post.title;
-               let ups = post.ups;
+            //    let random = getRandomInt(0, listSize);
+               let random = Math.floor((Math.random()*listSize))
+               let post1 = json.data.children[random].data;
+               console.log(post1)
+               let subreddit = post1.subreddit;
+               let author = post1.author;
+               let title = post1.title;
+               let ups = post1.ups;
 
                let message = "<b>Subreddit </b>: " + subreddit + 
                " <b>Author</b>:" + author + " <b>Title</b>:" + 
                title + " <b>Up votes</b>: " + ups;
 
-               let select = document.getElementById("redditList");
-               select.innerHTML += "<li>" + message + "</li>";
+               let select1 = document.getElementById("redditList");
+               select1.innerHTML += "<li>" + message + "</li>";
     
 
                 /*.......*/
