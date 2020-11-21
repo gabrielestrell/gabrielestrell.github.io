@@ -62,7 +62,7 @@ window.onload = async function makeChart() {
             { 
                 type: "column",
                 name: "Popular Reddit",
-                dataPoints:chartValues
+                dataPoints: chartValues
             }
         ]
     });
