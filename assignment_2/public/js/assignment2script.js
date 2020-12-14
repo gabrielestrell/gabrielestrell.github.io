@@ -302,7 +302,7 @@ function submitNewPerson() {
 */
 function submitNewGroup() {
 
-  console.log("Called submitNewPerson");
+  console.log("Called submitNewGroup");
   let firstName = document.getElementById("addFirstName").value;
 
   console.log("firstName:" + firstName);
