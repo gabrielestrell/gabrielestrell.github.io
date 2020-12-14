@@ -301,6 +301,7 @@ function submitNewPerson() {
  ------ ADD NEW GROUP ------
 */
 function submitNewGroup() {
+
   console.log("Called submitNewGroup");
   let groupName = document.getElementById("addGroupName").value;
 
@@ -340,6 +341,7 @@ function submitNewGroup() {
       console.log(err);
       document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.groupName;
     });
+
 }
 
 /*
