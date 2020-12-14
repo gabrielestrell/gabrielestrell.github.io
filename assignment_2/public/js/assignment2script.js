@@ -338,7 +338,7 @@ function submitNewGroup() {
     })
     .catch((err) => {
       console.log(err);
-      document.getElementById("postNewPersonContent").innerHTML = "Invalid person : " + data.groupName;
+      document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.groupName;
     });
 }
 
