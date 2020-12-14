@@ -381,10 +381,6 @@ async function getPageData(prepend = "") {
         optionTag.innerHTML = element.firstName;       // Insert text
         optionTag.setAttribute("value", element.id);
         document.getElementById(personName).appendChild(optionTag);          // Append <p> to <body>
-        let groupName = prepend + "groupName"
-        optionTag.innerHTML = element.groupName;       // Insert text
-        optionTag.setAttribute("value", element.id);
-        document.getElementById(groupName).appendChild(optionTag);          // Append <p> to <body>
       });
     })
 
