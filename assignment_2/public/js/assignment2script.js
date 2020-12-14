@@ -303,10 +303,10 @@ function submitNewPerson() {
 function submitNewGroup() {
 
   console.log("Called submitNewGroup");
-  let groupName = document.getElementById("addGroupName").value;
+  let groupValue = document.getElementById("addGroupValue").value;
 
-  console.log("groupName:" + groupName);
-  data = { 'groupName': groupName };
+  console.log("groupValue:" + groupValue);
+  data = { 'groupValue': groupValue };
 
   //console.log(JSON.stringify(data))
   let groupURL = "http://localhost:4000/group";
@@ -328,9 +328,9 @@ function submitNewGroup() {
 
       let message = "ERROR";
       if (typeof group.id !== "undefined") {
-        groupName = group.data.groupName;
+        groupValue = group.data.groupValue;
         groupId = group.id;
-        message = "Message: " + group.message + " groupName: " + groupName + "<br>groupId: " + groupId + "<br> ";
+        message = "Message: " + group.message + " groupValue: " + groupValue + "<br>groupId: " + groupId + "<br> ";
       }
       else if(typeof group !== "undefined"){
         message = "Message: " + group.message ;
@@ -339,7 +339,7 @@ function submitNewGroup() {
     })
     .catch((err) => {
       console.log(err);
-      document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.groupName;
+      document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.groupValue;
     });
 
 }
