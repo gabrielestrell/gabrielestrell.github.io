@@ -298,6 +298,13 @@ function submitNewPerson() {
 }
 
 /*
+ ------ ADD NEW GROUP ------
+*/
+function submitNewGroup() {
+
+}
+
+/*
    ------------   Code for onload of page ------------
    1) Fills out drop down boxes
 */
