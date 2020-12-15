@@ -303,43 +303,43 @@ function submitNewPerson() {
 function submitNewGroup() {
 
   console.log("Called submitNewGroup");
-  let firstName = document.getElementById("addFirstName").value;
+  let firstName = document.getElementById("addGroupName").value;
 
-  console.log("firstName:" + firstName);
-  data = { 'firstName': firstName };
+  console.log("groupName:" + groupName);
+  data = { 'groupName': groupName };
 
   //console.log(JSON.stringify(data))
-  let personURL = "http://localhost:4000/person";
-  const fetchPromise = fetch(personURL, {
+  let groupURL = "http://localhost:4000/group";
+  const fetchPromise = fetch(groupURL, {
     method: 'POST', headers: {
       'Content-Type': 'application/json'
 
     }, body: JSON.stringify(data)
   });
 
-  let personId;
+  let groupId;
   fetchPromise
     .then((response) => {
       return response.json();
     })
-    .then((person) => {
-      console.log("Here POST person");
-      console.log(person);
+    .then((group) => {
+      console.log("Here POST group");
+      console.log(group);
 
       let message = "ERROR";
-      if (typeof person.id !== "undefined") {
-        firstName = person.data.firstName;
-        personId = person.id;
-        message = "Message: " + person.message + " firstName: " + firstName + "<br>personId: " + personId + "<br> ";
+      if (typeof group.id !== "undefined") {
+        firstName = group.data.groupName;
+        groupId = group.id;
+        message = "Message: " + group.message + " groupName: " + groupName + "<br>groupId: " + groupId + "<br> ";
       }
-      else if(typeof person !== "undefined"){
-        message = "Message: " + person.message ;
+      else if(typeof group !== "undefined"){
+        message = "Message: " + group.message ;
       }
-      document.getElementById("postNewPersonContent").innerHTML = message;
+      document.getElementById("postNewGroupContent").innerHTML = message;
     })
     .catch((err) => {
       console.log(err);
-      document.getElementById("postNewPersonContent").innerHTML = "Invalid person : " + data.firstName;
+      document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.groupName;
     });
 
 }
