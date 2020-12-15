@@ -303,7 +303,7 @@ function submitNewPerson() {
 function submitNewGroup() {
 
   console.log("Called submitNewGroup");
-  let firstName = document.getElementById("addGroupName").value;
+  let groupName = document.getElementById("addGroupName").value;
 
   console.log("groupName:" + groupName);
   data = { 'groupName': groupName };
@@ -328,7 +328,7 @@ function submitNewGroup() {
 
       let message = "ERROR";
       if (typeof group.id !== "undefined") {
-        firstName = group.data.groupName;
+        groupName = group.data.groupName;
         groupId = group.id;
         message = "Message: " + group.message + " groupName: " + groupName + "<br>groupId: " + groupId + "<br> ";
       }
