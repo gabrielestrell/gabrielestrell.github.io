@@ -16,9 +16,9 @@ body {
     /*background-color: yellow;*/
     /*border: 10px solid red;*/
     /*margin: 10px;*/
-    margin: 0;
     /*padding: 5px;*/
-    padding: 0;
+    /*padding: 0;
+    margin: 0;*/
 }
 
 .site-header {
@@ -32,6 +32,7 @@ body {
     background-color: #778da9;
     padding: 0;
     /*text-align: center;*/
+    margin: 0;
 }
 
 .recipe-title {
@@ -48,7 +49,7 @@ body {
     /*
     background-color: orange;
     border: 2px dashed purple;*/
-    margin: 0;
+    margin: 2rem;
 }
 
 .recipe-super-meta {
@@ -59,7 +60,7 @@ body {
 }
 
 .meta-item {
-    padding: 0.5rem 0;
+    padding: 1rem;
 }
 
 .recipe-description {
@@ -97,13 +98,13 @@ h2 {
 .ingredients-list li {
     /*background-color: white;
     border: 1px solid black;*/
-    margin: 2px;
-    padding: 1px;
+    /*margin: 2px;
+    padding: 1px;*/
 }
 
 .instructions-section {
-    background-color: lightgray;
-    border: 3px solid navy;
+    /*background-color: lightgray;
+    border: 3px solid navy;*/
 }
 
 .instruction-step {
