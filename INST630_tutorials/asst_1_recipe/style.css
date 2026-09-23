@@ -69,11 +69,13 @@ body {
     font-size: 16px;
     /*color: purple;*/
     border: solid black;
+    margin: 2rem;
 }
 
 .ingredients-header {
     text-align: center;
     padding: 2rem;
+    border-top: 5px solid black;
 }
 
 .ingredients-section {
@@ -90,11 +92,14 @@ h2 {
 
 .instructions-header {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+    border-top: 5px solid black;
+    margin: 2rem;
 }
 
 .ingredients-list {
     list-style: none;
+    padding: 1rem;
 }
 
 .ingredients-list li {
@@ -105,12 +110,14 @@ h2 {
 }
 
 .instructions-section {
-    /*background-color: lightgray;
-    border: 3px solid navy;*/
+    background-color: #778da9;
+    /*border: 3px solid navy;*/
+    border-radius: 20px;
+    padding: 2rem;
 }
 
 .instruction-step {
-    background-color: beige;
+    /*background-color: beige;*/
     /*border: 2px solid maroon;*/
     margin: 3px;
 }
@@ -141,6 +148,8 @@ h2 {
     padding: 1px;
 }
 
-@media (min-width: 700px) {
-
+@media (max-width: 600px) {
+    body {
+        d
+    }
 }
