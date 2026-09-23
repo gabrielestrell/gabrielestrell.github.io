@@ -73,6 +73,7 @@ body {
 
 .ingredients-header {
     text-align: center;
+    padding: 2rem;
 }
 
 .ingredients-section {
@@ -89,6 +90,7 @@ h2 {
 
 .instructions-header {
     text-align: center;
+    padding: 2rem;
 }
 
 .ingredients-list {
@@ -109,7 +111,7 @@ h2 {
 
 .instruction-step {
     background-color: beige;
-    border: 2px solid maroon;
+    /*border: 2px solid maroon;*/
     margin: 3px;
 }
 
@@ -139,4 +141,6 @@ h2 {
     padding: 1px;
 }
 
-/*@media (max-width: 1200px)*/
+@media (min-width: 700px) {
+
+}
