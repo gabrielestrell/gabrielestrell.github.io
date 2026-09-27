@@ -37,6 +37,10 @@ const guestField   = document.querySelector('#guest-field');
 // const confirmation = ;
 // const regret       = ;
 
+const btnYes = document.querySelector('#btn-yes');
+const btnNo = document.querySelector('#btn-no');
+const confirmation = document.querySelector('#confirmation');
+const regret = document.querySelector('#regret');
 
 // ── 3. HELPERS: small functions that do one thing ───────────
 //
