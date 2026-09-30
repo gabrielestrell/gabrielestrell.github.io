@@ -72,6 +72,7 @@ const getGuests = () => Number(guestInput.value);
 btnYes.addEventListener('click', () => {
 
   // YOUR CODE HERE
+  
 
 
 });
