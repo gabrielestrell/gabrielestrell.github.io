@@ -125,9 +125,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         
         // YOUR CODE HERE:
         restaurants.forEach((resto, index) => {
-            restaurantList.innerHTML += <div>${resto.name}</div>
-            restaurantList.innerHTML += <div>${resto.cuisine}</div>
-            
+            restaurantList.innerHTML += `<div>${resto.name} ${resto.cuisine}</div>`
+            //restaurantList.innerHTML += `<div>${resto.cuisine}</div>`
         })
         
         console.log('Displayed all restaurants using forEach');
