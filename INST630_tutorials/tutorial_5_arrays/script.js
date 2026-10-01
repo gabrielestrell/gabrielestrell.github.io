@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Hint: Use forEach on the cheapRestaurants array
         
         // YOUR CODE HERE:
-        
+        const cheapRestaurants = restaurants.filter(restaurant => restaurant.priceRange == "$" || restaurant.priceRange == "$$");
         
         console.log('Showed cheap restaurants using filter');
     });
