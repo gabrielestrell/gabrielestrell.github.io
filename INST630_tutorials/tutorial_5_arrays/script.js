@@ -124,7 +124,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Hint: Use restaurantList.innerHTML += to add each one
         
         // YOUR CODE HERE:
-        
+        restaurants.forEach((resto, index) => {
+            restaurantList.innerHTML += <div>${resto.name}</div>
+            restaurantList.innerHTML += <div>${resto.cuisine}</div>
+            
+        })
         
         console.log('Displayed all restaurants using forEach');
     });
