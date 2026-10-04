@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         cheapRestaurants.forEach((cheap, index) => {
             //filteredList.innerHTML += `<div>${cheap.name} ${cheap.priceRange}</div>`
-            filteredList.innerHTML += <div>${cheap.name}</div>
+            filteredList.innerHTML += `<div>${cheap.name}</div>`
         })
         
         console.log('Showed cheap restaurants using filter');
