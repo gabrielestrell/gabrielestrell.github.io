@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         
         // YOUR CODE HERE:
         restaurants.forEach((resto, index) => {
-            restaurantList.innerHTML += `<div>${resto.name} ${resto.cuisine}</div>`
+            restaurantList.innerHTML += `<div>${resto.name} - ${resto.cuisine}</div>`
             //restaurantList.innerHTML += `<div>${resto.cuisine}</div>`
         })
         
@@ -153,10 +153,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // YOUR CODE HERE:
         filteredList.innerHTML = '';
 
-        const cheapRestaurants = restaurants.filter(restaurant => restaurant.priceRange == "$" || restaurant.priceRange == "$$");
+        //const cheapRestaurants = restaurants.filter(restaurant => restaurant.priceRange == "$" || restaurant.priceRange == "$$");
+
+        const cheapRestaurants = restaurants.filter((restaurant) => {
+            return restaurant.priceRange == "$" || restaurant.priceRange == "$$";
+        })
 
         cheapRestaurants.forEach((cheap, index) => {
-            filteredList.innerHTML += `<div>${cheap.name} ${cheap.priceRange}</div>`
+            //filteredList.innerHTML += `<div>${cheap.name} ${cheap.priceRange}</div>`
+            filteredList.innerHTML += <div>${cheap.name}</div>
         })
         
         console.log('Showed cheap restaurants using filter');
@@ -224,7 +229,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return restaurant.rating === 4.8;
         });
 
-        foundItem.innerHTML = `<div>${bestRestaurant.name} ${bestRestaurant.cuisine} ${bestRestaurant.rating}</div>`;
+        foundItem.innerHTML = `<div>${bestRestaurant.name} - ${bestRestaurant.cuisine} - ${bestRestaurant.rating}</div>`;
         
         console.log('Found best restaurant using find');
     });
