@@ -12,7 +12,7 @@ let restaurants = [];
 // TODO 1: A CALLBACK THAT RUNS LATER
 // When the button is clicked, use setTimeout to write "Ready!" into #ready-output
 // after 2 seconds. Predict first: which reaches the log first, "Waiting..." or "Ready!"?
-// My prediction:
+// My prediction: "Waiting..." reaches the log first.
 // ============================================
 
 document.querySelector('#run-todo-1').addEventListener('click', () => {
@@ -21,8 +21,23 @@ document.querySelector('#run-todo-1').addEventListener('click', () => {
   // YOUR CODE HERE
   // Hint: setTimeout(() => { ...write 'Ready!' to the page, and log('#log-todo-1', 'Ready!') }, 2000);
 
+
+  //log('#log-todo-1', 'Waiting...');
+  setTimeout(() => {
+    document.querySelector('#ready-output').textContent = 'Ready!';
+    log('#log-todo-1', 'Ready!');
+  }, 2000);
+
   log('#log-todo-1', 'Waiting...');
-});
+
+  
+
+  });
+
+//setTimeout(() => {
+//    console.log('#ready-output', 'Ready!');
+//  }, 1000);
+  //log('#log-todo-1', 'Ready!')
 
 // ============================================
 // TODO 2: FETCH WITH .then()
@@ -41,6 +56,12 @@ document.querySelector('#load-then').addEventListener('click', () => {
   //   .then((data) => {
   //     ...save data into restaurants, log how many arrived, and call setCountButton(true)
   //   });
+  fetch('restaurants.json')
+    .then((response) => response.json())
+    .then((data) => {
+
+    })
+
 
   log('#log-then', 'This line comes after fetch() in the code');
 });
