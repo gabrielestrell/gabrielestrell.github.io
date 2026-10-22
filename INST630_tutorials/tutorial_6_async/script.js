@@ -20,19 +20,19 @@ document.querySelector('#run-todo-1').addEventListener('click', () => {
 
   // YOUR CODE HERE
   // Hint: setTimeout(() => { ...write 'Ready!' to the page, and log('#log-todo-1', 'Ready!') }, 2000);
+  //log('#log-todo-1', 'Waiting...');
   setTimeout(() => {
-    console.log('#log-todo-1', 'Ready!');
+    document.querySelector('#ready-output').textContent = 'Ready!';
+    log('#log-todo-1', 'Ready!');
   }, 2000);
+  
+  
+  //setTimeout(() => {
+  //  console.log('#log-todo-1', 'Ready!');
+  //}, 2000);
 
   log('#log-todo-1', 'Waiting...');
 });
-
-
-//log('#log-todo-1', 'Waiting...');
-//  setTimeout(() => {
-//    document.querySelector('#ready-output').textContent = 'Ready!';
-//    log('#log-todo-1', 'Ready!');
-//  }, 2000);
 
 
 //setTimeout(() => {
@@ -63,11 +63,11 @@ document.querySelector('#load-then').addEventListener('click', () => {
   .then((response) => response.json())
   .then((data) => {
     restaurants = data;
-    console.log('#log-then', `The callback got ${restaurants.length} restaurants.`);
+    log(`The callback got ${restaurants.length} restaurants.`);
   })
 
 
-  log('#log-then', 'This line comes after fetch() in the code');
+  //log('#log-then', 'This line comes after fetch() in the code');
 });
 
 // ============================================
@@ -87,6 +87,10 @@ document.querySelector('#load-await').addEventListener('click', async () => {
   // } catch (error) {
   //   ...console.error the error, then showStatus('error', ...) with a friendly message
   // }
+
+  function showStatus(){
+
+  }
 });
 
 // ============================================
