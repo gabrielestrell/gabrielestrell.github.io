@@ -88,19 +88,19 @@ document.querySelector('#load-await').addEventListener('click', async () => {
   //   ...console.error the error, then showStatus('error', ...) with a friendly message
   // }
 
-  function showStatus(){
-    try {
-      const response = await fetch('restaurants.json')
+  //function showStatus(){
+  //  try {
+  //    const response = await fetch('restaurants.json')
 
-      if (!response.ok) {
-        throw new Error(`HTTP error: ${response.status}`);
-      }
+  //    if (!response.ok) {
+  //      throw new Error(`HTTP error: ${response.status}`);
+  //    }
 
-      const data = await response.json();
-    } catch (error) {
+  //    const data = await response.json();
+  //  } catch (error) {
       
-    }
-  }
+  //  }
+  //}
 
 });
 
