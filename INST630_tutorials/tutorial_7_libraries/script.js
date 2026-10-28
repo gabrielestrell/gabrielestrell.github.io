@@ -28,6 +28,7 @@ document.querySelector('#make-lists').addEventListener('click', () => {
   // Hint: count into priceCounts with restaurants.forEach, exactly as in Tutorial 6
   // Hint: priceLabels = Object.keys(priceCounts);    gives ['$$', '$$$', ...]
   // Hint: priceNumbers = Object.values(priceCounts); gives [3, 2, ...]
+  priceCounts = restaurants.forEach
 
   showShape('#lists-output', `labels  = ${toText(priceLabels)}\nnumbers = ${toText(priceNumbers)}`);
   setButton('#draw-bar', true);
