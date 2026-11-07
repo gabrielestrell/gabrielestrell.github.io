@@ -26,8 +26,6 @@ function showTable(data) {
   const rows = data
     .map(
         (inspection) => `
-        <table class = "restaurant-table">
-        
         <tr>
         <td>${orNotListed(inspection.establishment_id)}</td>
         <td>${orNotListed(inspection.name)}</td>
@@ -36,11 +34,11 @@ function showTable(data) {
         <td>${orNotListed(inspection.inspection_type)}</td>
         <td>${orNotListed(inspection.inspection_results)}</td>
         </tr>
-        </table>
         `
     )
     .join("");
 
+  /*html*/
   return `
                 <h2 class="view-title">📊 Table View</h2>
                 <p class="view-description">Inspection information for health inspector</p>
