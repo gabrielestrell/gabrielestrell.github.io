@@ -22,20 +22,6 @@ function showTable(data) {
   // - Show "Not listed" instead of undefined when a value is missing
   // - Optional: add sorting
   /*html*/ 
-
-  const tableHTML = data
-  .map(
-    (inspection) => 
-              <div class = "restaurant-table">
-                    <tr>
-            <caption>Restaurant Inspection Information for the Health Inspector</caption>
-            <th>Establishment Name</th>
-            <th>Category</th>
-            <th>Date</th>
-            <th>Inspection Type</th>
-            <th>Inspection Result</th></tr>
-            </div>
-  )
   return `
                 <h2 class="view-title">📊 Table View</h2>
                 <div class="todo-implementation">
