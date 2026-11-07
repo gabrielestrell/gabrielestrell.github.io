@@ -31,6 +31,24 @@ const CHECKS = [
   { field: 'food_contact_surfaces_and', label: 'Food contact surfaces' },
 ];
 
+function countFailsByCheck(data) {
+  return CHECKS.map((check) => ({
+    label: check.label,
+    count: data.filter((inspection) => inspection[check.field] === 'Out of Compliance').length,
+  })).sort((a, b) => b.count - a.count);
+}
+
+function countByResult(data) {
+  const counts = {};
+  data.forEach((inspection) => {
+    const result = orNotListed(inspection.inspection_results);
+    counts[result] = (counts[result] || 0) + 1;
+  });
+  return Object.entries(counts)
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 function showCharts(data) {
   // TODO: Replace each TODO sentence below with text that says what that chart shows.
   // Charts are drawn as pictures, so screen readers can't read them.
