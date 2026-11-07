@@ -13,6 +13,24 @@ function orNotListed(value) {
   return value === '------' || value === 'N/A' || value === undefined ? 'Not listed' : value;
 }
 
+const CHECKS = [
+  { field: 'food_from_approved_source', label: 'Food from approved source' },
+  { field: 'food_protected_from', label: 'Food protection' },
+  { field: 'ill_workers_restricted', label: 'Ill workers restricted' },
+  { field: 'proper_hand_washing', label: 'Proper hand washing' },
+  { field: 'cooling_time_and_temperature', label: 'Cooling time and temperature' },
+  { field: 'cold_holding_temperature', label: 'Cold holding temperature' },
+  { field: 'hot_holding_temperature', label: 'Hot holding temperature' },
+  { field: 'cooking_time_and_temperature', label: 'Cooking time and temperature' },
+  { field: 'reheating_time_and_temperature', label: 'Reheating time and temperature' },
+  { field: 'hot_and_cold_running_water', label: 'Hot and cold running water' },
+  { field: 'proper_sewage_disposal', label: 'Proper sewage disposal' },
+  { field: 'no_bare_hand_contact', label: 'No bare hand contact' },
+  { field: 'adequate_hand_washing', label: 'Adequate hand washing' },
+  { field: 'rodent_and_insects', label: 'Rodents and insects' },
+  { field: 'food_contact_surfaces_and', label: 'Food contact surfaces' },
+];
+
 function showCharts(data) {
   // TODO: Replace each TODO sentence below with text that says what that chart shows.
   // Charts are drawn as pictures, so screen readers can't read them.
