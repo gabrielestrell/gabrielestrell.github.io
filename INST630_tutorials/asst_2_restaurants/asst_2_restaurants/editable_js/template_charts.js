@@ -8,6 +8,11 @@
  *
  * Chart.js docs: https://www.chartjs.org/docs/latest/getting-started/
  */
+
+function orNotListed(value) {
+  return value === '------' || value === 'N/A' || value === undefined ? 'Not listed' : value;
+}
+
 function showCharts(data) {
   // TODO: Replace each TODO sentence below with text that says what that chart shows.
   // Charts are drawn as pictures, so screen readers can't read them.
