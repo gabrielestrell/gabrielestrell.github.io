@@ -27,15 +27,7 @@ function showTable(data) {
     .map(
         (inspection) => `
         <table class = "restaurant-table">
-        <caption>Health Inspector Information</caption>
-        <tr>
-        <th>Establishment ID</th>
-        <th>Establishment Name</th>
-        <th>Category</th>
-        <th>Inspection Date</th>
-        <th>Inspection Type</th>
-        <th>Inspection Results</th>
-        </tr>
+        
         <tr>
         <td>${orNotListed(inspection.establishment_id)}</td>
         <td>${orNotListed(inspection.name)}</td>
@@ -51,14 +43,29 @@ function showTable(data) {
 
   return `
                 <h2 class="view-title">📊 Table View</h2>
-                <div class="todo-implementation">
-                    <h3>TODO: Implement Table View</h3>
-                    <p><strong>Your task:</strong> Display the data as a real HTML table, with header cells and a caption</p>
-                    <p><strong>Good for:</strong> Scanning specific data points, comparing values, finding specific information</p>
-                    <p><strong>Consider:</strong> Which columns are most important? How can you make scanning easy?</p>
-                    <p><strong>Data available:</strong> ${data.length} items loaded</p>
-                </div>
-            `;
+                <p class="view-description">Inspection information for health inspector</p>
+                <table class = "restaurant-table">
+                    <caption>Health Inspector Information</caption>
+                    <tr>
+                    <th scope = "col">Establishment ID</th>
+                    <th scope = "col">Establishment Name</th>
+                    <th scope = "col">Category</th>
+                    <th scope = "col">Inspection Date</th>
+                    <th scope = "col">Inspection Type</th>
+                    <th scope = "col">Inspection Results</th>
+                    </tr>
+                    <tbody>${rows}</tbody>
+                </table>
+        `;
 }
 
 export default showTable;
+
+//<div class="todo-implementation">
+                //    <h3>TODO: Implement Table View</h3>
+                //    <p><strong>Your task:</strong> Display the data as a real HTML table, with header cells and a caption</p>
+                //    <p><strong>Good for:</strong> Scanning specific data points, comparing values, finding specific information</p>
+                //    <p><strong>Consider:</strong> Which columns are most important? How can you make scanning easy?</p>
+                //    <p><strong>Data available:</strong> ${data.length} items loaded</p>
+                //</div>
+            //;
