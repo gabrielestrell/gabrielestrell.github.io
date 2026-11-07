@@ -22,6 +22,33 @@ function showTable(data) {
   // - Show "Not listed" instead of undefined when a value is missing
   // - Optional: add sorting
   /*html*/ 
+
+  const rows = data
+    .map(
+        (inspection) => `
+        <table class = "restaurant-table">
+        <caption>Health Inspector Information</caption>
+        <tr>
+        <th>Establishment ID</th>
+        <th>Establishment Name</th>
+        <th>Category</th>
+        <th>Inspection Date</th>
+        <th>Inspection Type</th>
+        <th>Inspection Results</th>
+        </tr>
+        <tr>
+        <td>${orNotListed(inspection.establishment_id)}</td>
+        <td>${orNotListed(inspection.name)}</td>
+        <td>${orNotListed(inspection.category)}</td>
+        <td>${formatDate(inspection.inspection_date)}</td>
+        <td>${orNotListed(inspection.inspection_type)}</td>
+        <td>${orNotListed(inspection.inspection_results)}</td>
+        </tr>
+        </table>
+        `
+    )
+    .join("");
+
   return `
                 <h2 class="view-title">📊 Table View</h2>
                 <div class="todo-implementation">
