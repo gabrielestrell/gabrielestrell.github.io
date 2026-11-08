@@ -44,6 +44,7 @@ function showTable(data) {
                 <p class="view-description">Inspection information for health inspector</p>
                 <table class = "restaurant-table">
                     <caption>Health Inspector Information</caption>
+                    <thead>
                     <tr>
                     <th scope = "col">Establishment ID</th>
                     <th scope = "col">Establishment Name</th>
@@ -52,6 +53,7 @@ function showTable(data) {
                     <th scope = "col">Inspection Type</th>
                     <th scope = "col">Inspection Results</th>
                     </tr>
+                    </thead>
                     <tbody>${rows}</tbody>
                 </table>
         `;

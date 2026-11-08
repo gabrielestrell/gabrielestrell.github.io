@@ -50,8 +50,6 @@ function countByResult(data) {
 }
 
 function showCharts(data) {
-  // TODO: Replace each TODO sentence below with text that says what that chart shows.
-  // Charts are drawn as pictures, so screen readers can't read them.
   const fails = countFailsByCheck(data);
   const failSentence = `${fails[0].label} was the check that failed most often: ${fails[0].count} of ${data.length} inspections.`;
 
@@ -84,7 +82,7 @@ function drawCharts(data) {
     return;
   }
 
-  // Chart 1: bar chart of failures per check
+  //bar chart
   const fails = countFailsByCheck(data);
   new Chart(document.querySelector('#chart-one'), {
     type: 'bar',
@@ -93,7 +91,7 @@ function drawCharts(data) {
       datasets: [{ label: 'Inspections with a failed check', data: fails.map((f) => f.count), backgroundColor: '#007cba' }],
     },
     options: {
-      indexAxis: 'y', // horizontal bars, so the long labels stay readable
+      indexAxis: 'y',
       plugins: { title: { display: true, text: 'Which food safety checks fail most often?' } },
       scales: {
         x: { title: { display: true, text: 'Number of inspections with a failed check' }, beginAtZero: true },
@@ -102,7 +100,7 @@ function drawCharts(data) {
     },
   });
 
-  // Chart 2: doughnut of inspection results (no axes, so no axis titles)
+  //doughnut
   const results = countByResult(data);
   const colors = ['#007cba', '#28a745', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14', '#20c997', '#6c757d', '#e83e8c'];
   new Chart(document.querySelector('#chart-two'), {
