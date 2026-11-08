@@ -52,71 +52,69 @@ function countByResult(data) {
 function showCharts(data) {
   // TODO: Replace each TODO sentence below with text that says what that chart shows.
   // Charts are drawn as pictures, so screen readers can't read them.
+  const fails = countFailsByCheck(data);
+  const failSentence = `${fails[0].label} was the check that failed most often: ${fails[0].count} of ${data.length} inspections.`;
+
+  const results = countByResult(data);
+  const notListed = results.find((r) => r.label === 'Not listed');
+  const listed = results.filter((r) => r.label !== 'Not listed');
+  const resultSentence = `The most common recorded result was "${listed[0].label}" (${listed[0].count} of ${data.length} inspections), and ${notListed ? notListed.count : 0} inspections have no result listed.`;
+
   /*html*/
   return `
-                <h2 class="view-title">📈 Charts View</h2>
-                <p class="view-description">Patterns in the data at a glance</p>
-                <div class="todo-implementation">
-                    <h3>TODO: Implement Charts View</h3>
-                    <p><strong>Your task:</strong> Draw at least two charts of different types, each answering a different question</p>
-                    <p><strong>Good for:</strong> Spotting patterns, comparing groups, seeing distributions</p>
-                    <p><strong>Records available:</strong> ${data.length} items to chart</p>
-                </div>
-                <div class="charts-grid">
-                    <figure class="chart-figure">
-                        <canvas id="chart-one"></canvas>
-                        <figcaption class="chart-summary">TODO: One sentence saying what this chart shows.</figcaption>
-                    </figure>
-                    <figure class="chart-figure">
-                        <canvas id="chart-two"></canvas>
-                        <figcaption class="chart-summary">TODO: One sentence saying what this chart shows.</figcaption>
-                    </figure>
-                </div>
-            `;
+      <h2 class="view-title">📈 Charts View</h2>
+    <p class="view-description">Patterns in the data at a glance</p>
+    <div class="charts-grid">
+      <figure class="chart-figure">
+        <canvas id="chart-one"></canvas>
+        <figcaption class="chart-summary">${failSentence}</figcaption>
+      </figure>
+      <figure class="chart-figure">
+        <canvas id="chart-two"></canvas>
+        <figcaption class="chart-summary">${resultSentence}</figcaption>
+      </figure>
+    </div>
+  `;
 }
 
 function drawCharts(data) {
-  // Chart.js is loaded by a <script> tag in index.html. If it didn't load, say so instead of breaking.
   if (typeof Chart === 'undefined') {
     document.querySelector('.charts-grid').innerHTML =
       '<p class="error">Chart.js did not load, so the charts can\'t be drawn. Check the &lt;script&gt; tag in index.html.</p>';
     return;
   }
 
-  // TODO 1: Reshape your data for the first chart.
-  // Chart.js doesn't take your array of records.
-  // It wants a list of labels and a matching list of numbers.
-  // Example: count inspections by type of business.
-  //
-  //   const counts = {};
-  //   data.forEach((item) => {
-  //     counts[item.category] = (counts[item.category] || 0) + 1;
-  //   });
-  //   const labels = Object.keys(counts);
-  //   const numbers = Object.values(counts);
+  // Chart 1: bar chart of failures per check
+  const fails = countFailsByCheck(data);
+  new Chart(document.querySelector('#chart-one'), {
+    type: 'bar',
+    data: {
+      labels: fails.map((f) => f.label),
+      datasets: [{ label: 'Inspections with a failed check', data: fails.map((f) => f.count), backgroundColor: '#007cba' }],
+    },
+    options: {
+      indexAxis: 'y', // horizontal bars, so the long labels stay readable
+      plugins: { title: { display: true, text: 'Which food safety checks fail most often?' } },
+      scales: {
+        x: { title: { display: true, text: 'Number of inspections with a failed check' }, beginAtZero: true },
+        y: { title: { display: true, text: 'Food safety check' } },
+      },
+    },
+  });
 
-  // TODO 2: Draw the first chart into <canvas id="chart-one">.
-  // Every chart needs a title, and every axis needs a label.
-  //
-  //   new Chart(document.querySelector('#chart-one'), {
-  //     type: 'bar',
-  //     data: {
-  //       labels: labels,
-  //       datasets: [{ label: 'Number of inspections', data: numbers }]
-  //     },
-  //     options: {
-  //       plugins: { title: { display: true, text: 'Inspections by type of business' } },
-  //       scales: {
-  //         x: { title: { display: true, text: 'Type of business' } },
-  //         y: { title: { display: true, text: 'Inspections' }, beginAtZero: true }
-  //       }
-  //     }
-  //   });
-
-  // TODO 3: Reshape your data again, and draw a second chart of a DIFFERENT type
-  // (pie, line, scatter...) into <canvas id="chart-two">, answering a different question.
-  // Ideas: inspection results as a pie, inspections per month as a line,
-  // or how many "Out of Compliance" checks each type of business averages.
+  // Chart 2: doughnut of inspection results (no axes, so no axis titles)
+  const results = countByResult(data);
+  const colors = ['#007cba', '#28a745', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14', '#20c997', '#6c757d', '#e83e8c'];
+  new Chart(document.querySelector('#chart-two'), {
+    type: 'doughnut',
+    data: {
+      labels: results.map((r) => r.label),
+      datasets: [{ data: results.map((r) => r.count), backgroundColor: colors.slice(0, results.length) }],
+    },
+    options: {
+      plugins: { title: { display: true, text: 'How did the inspections turn out?' } },
+    },
+  });
 }
 
 export { showCharts, drawCharts };
