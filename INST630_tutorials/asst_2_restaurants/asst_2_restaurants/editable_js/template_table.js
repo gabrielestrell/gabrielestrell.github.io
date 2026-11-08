@@ -42,6 +42,7 @@ function showTable(data) {
   return `
                 <h2 class="view-title">📊 Table View</h2>
                 <p class="view-description">Inspection information for health inspector</p>
+                <div class = "table-scroll">
                 <table class = "restaurant-table">
                     <caption>Health Inspector Information</caption>
                     <thead>
@@ -56,6 +57,7 @@ function showTable(data) {
                     </thead>
                     <tbody>${rows}</tbody>
                 </table>
+                </div>
         `;
 }
 

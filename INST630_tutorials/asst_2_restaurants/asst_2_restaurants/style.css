@@ -226,3 +226,8 @@ body {
     background: white;
     border-radius: 8px;
 }
+
+
+.table-scroll {
+    overflow-x: auto;
+}
