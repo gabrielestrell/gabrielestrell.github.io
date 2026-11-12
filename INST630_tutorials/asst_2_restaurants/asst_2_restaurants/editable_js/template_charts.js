@@ -104,7 +104,7 @@ function drawCharts(data) {
   const results = countByResult(data);
   const colors = ['#007cba', '#28a745', '#ffc107', '#dc3545', '#6f42c1', '#fd7e14', '#20c997', '#6c757d', '#e83e8c'];
   new Chart(document.querySelector('#chart-two'), {
-    type: 'doughnut',
+    type: 'pie',
     data: {
       labels: results.map((r) => r.label),
       datasets: [{ data: results.map((r) => r.count), backgroundColor: colors.slice(0, results.length) }],
